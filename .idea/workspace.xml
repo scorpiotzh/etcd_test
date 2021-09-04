@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a3d71c5a-6dae-48e7-82b9-785e5fcd3288" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/etcd/etcd.go" beforeDir="false" afterPath="$PROJECT_DIR$/etcd/etcd.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etcd/kv.go" beforeDir="false" afterPath="$PROJECT_DIR$/etcd/kv.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/etcd/kv_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/etcd/kv_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +48,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
-  <component name="RunManager" selected="Go Test.TestKV in github.com/scorpiotzh/etcd_test/etcd">
+  <component name="RunManager" selected="Go Test.TestDelKV in github.com/scorpiotzh/etcd_test/etcd">
     <configuration name="go build github.com/scorpiotzh/etcd_test" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="etcd_test" />
       <working_directory value="$PROJECT_DIR$" />
@@ -57,6 +56,28 @@
       <filePath value="$PROJECT_DIR$/main.go" />
       <package value="github.com/scorpiotzh/etcd_test" />
       <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestDelKV in github.com/scorpiotzh/etcd_test/etcd" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="etcd_test" />
+      <working_directory value="$PROJECT_DIR$/etcd" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/scorpiotzh/etcd_test/etcd" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestDelKV\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestGetKV in github.com/scorpiotzh/etcd_test/etcd" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="etcd_test" />
+      <working_directory value="$PROJECT_DIR$/etcd" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/scorpiotzh/etcd_test/etcd" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestGetKV\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestKV in github.com/scorpiotzh/etcd_test/etcd" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -70,8 +91,22 @@
       <pattern value="^\QTestKV\E$" />
       <method v="2" />
     </configuration>
+    <configuration name="TestPutKV in github.com/scorpiotzh/etcd_test/etcd" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="etcd_test" />
+      <working_directory value="$PROJECT_DIR$/etcd" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/scorpiotzh/etcd_test/etcd" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestPutKV\E$" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestDelKV in github.com/scorpiotzh/etcd_test/etcd" />
+        <item itemvalue="Go Test.TestGetKV in github.com/scorpiotzh/etcd_test/etcd" />
+        <item itemvalue="Go Test.TestPutKV in github.com/scorpiotzh/etcd_test/etcd" />
         <item itemvalue="Go Test.TestKV in github.com/scorpiotzh/etcd_test/etcd" />
         <item itemvalue="Go Build.go build github.com/scorpiotzh/etcd_test" />
       </list>
@@ -83,7 +118,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="etcd kv" />
+    <option name="LAST_COMMIT_MESSAGE" value="etcd kv" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

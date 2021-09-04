@@ -4,9 +4,9 @@ import (
 	"github.com/coreos/etcd/clientv3"
 )
 
-func (c *Client) PutKV(k, v string) (*clientv3.PutResponse, error) {
+func (c *Client) PutKV(k, v string, opts ...clientv3.OpOption) (*clientv3.PutResponse, error) {
 	kv := clientv3.NewKV(c.client)
-	return kv.Put(c.ctx, k, v, clientv3.WithPrevKV())
+	return kv.Put(c.ctx, k, v, opts...)
 }
 
 func (c *Client) GetKV(k string, opts ...clientv3.OpOption) (*clientv3.GetResponse, error) {

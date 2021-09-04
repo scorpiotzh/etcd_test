@@ -48,16 +48,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
-  <component name="RunManager" selected="Go Test.TestDelKV in github.com/scorpiotzh/etcd_test/etcd">
-    <configuration name="go build github.com/scorpiotzh/etcd_test" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="etcd_test" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/main.go" />
-      <package value="github.com/scorpiotzh/etcd_test" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Test.TestWatch in github.com/scorpiotzh/etcd_test/etcd">
     <configuration name="TestDelKV in github.com/scorpiotzh/etcd_test/etcd" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="etcd_test" />
       <working_directory value="$PROJECT_DIR$/etcd" />
@@ -80,7 +71,7 @@
       <pattern value="^\QTestGetKV\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestKV in github.com/scorpiotzh/etcd_test/etcd" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestKeepAlive in github.com/scorpiotzh/etcd_test/etcd" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="etcd_test" />
       <working_directory value="$PROJECT_DIR$/etcd" />
       <framework value="gotest" />
@@ -88,10 +79,10 @@
       <package value="github.com/scorpiotzh/etcd_test/etcd" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestKV\E$" />
+      <pattern value="^\QTestKeepAlive\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestPutKV in github.com/scorpiotzh/etcd_test/etcd" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestLeaseGrant in github.com/scorpiotzh/etcd_test/etcd" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="etcd_test" />
       <working_directory value="$PROJECT_DIR$/etcd" />
       <framework value="gotest" />
@@ -99,16 +90,27 @@
       <package value="github.com/scorpiotzh/etcd_test/etcd" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestPutKV\E$" />
+      <pattern value="^\QTestLeaseGrant\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestWatch in github.com/scorpiotzh/etcd_test/etcd" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="etcd_test" />
+      <working_directory value="$PROJECT_DIR$/etcd" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/scorpiotzh/etcd_test/etcd" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestWatch\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestWatch in github.com/scorpiotzh/etcd_test/etcd" />
+        <item itemvalue="Go Test.TestLeaseGrant in github.com/scorpiotzh/etcd_test/etcd" />
+        <item itemvalue="Go Test.TestKeepAlive in github.com/scorpiotzh/etcd_test/etcd" />
         <item itemvalue="Go Test.TestDelKV in github.com/scorpiotzh/etcd_test/etcd" />
         <item itemvalue="Go Test.TestGetKV in github.com/scorpiotzh/etcd_test/etcd" />
-        <item itemvalue="Go Test.TestPutKV in github.com/scorpiotzh/etcd_test/etcd" />
-        <item itemvalue="Go Test.TestKV in github.com/scorpiotzh/etcd_test/etcd" />
-        <item itemvalue="Go Build.go build github.com/scorpiotzh/etcd_test" />
       </list>
     </recent_temporary>
   </component>

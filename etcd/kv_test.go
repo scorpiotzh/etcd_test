@@ -16,17 +16,17 @@ func TestPutKV(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if resp, err := c.PutKV("/test/t1", "1234"); err != nil {
+	if resp, err := c.PutKV("/test/t1", "1234", clientv3.WithPrefix()); err != nil {
 		t.Fatal(err)
 	} else {
 		StringPutResponse(resp)
 	}
-	if resp, err := c.PutKV("/test/t2", "3214"); err != nil {
+	if resp, err := c.PutKV("/test/t2", "3214", clientv3.WithPrefix()); err != nil {
 		t.Fatal(err)
 	} else {
 		StringPutResponse(resp)
 	}
-	if resp, err := c.PutKV("/test/t3", "32145"); err != nil {
+	if resp, err := c.PutKV("/test/t3", "32145", clientv3.WithPrefix()); err != nil {
 		t.Fatal(err)
 	} else {
 		StringPutResponse(resp)

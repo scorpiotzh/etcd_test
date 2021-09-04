@@ -28,13 +28,3 @@ func NewClient(ctx context.Context, endpoints []string) (*Client, error) {
 		return &c, nil
 	}
 }
-
-func (c *Client) PutKV(k, v string) (*clientv3.PutResponse, error) {
-	kv := clientv3.NewKV(c.client)
-	return kv.Put(c.ctx, k, v, clientv3.WithPrevKV())
-}
-
-func (c *Client) GetKV(k string) (*clientv3.GetResponse, error) {
-	kv := clientv3.NewKV(c.client)
-	return kv.Get(c.ctx, k)
-}

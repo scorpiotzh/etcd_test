@@ -2,7 +2,7 @@ package etcd
 
 import (
 	"context"
-	"github.com/scorpiotzh/toolib"
+	"github.com/coreos/etcd/clientv3"
 	"testing"
 )
 
@@ -11,21 +11,26 @@ func TestKV(t *testing.T) {
 	if err != nil {
 		panic(err)
 	}
-	if resp, err := c.PutKV("test", "123"); err != nil {
+	if resp, err := c.PutKV("/test/t3", "1234"); err != nil {
 		panic(err)
 	} else {
-		log.Info(toolib.JsonString(resp.PrevKv))
-		if resp.PrevKv != nil {
-			log.Info(string(resp.PrevKv.Key), string(resp.PrevKv.Value))
-		}
+		StringPutResponse(resp)
+	}
+	if resp, err := c.PutKV("/test/t2", "3214"); err != nil {
+		panic(err)
+	} else {
+		StringPutResponse(resp)
 	}
 
-	if resp, err := c.GetKV("test"); err != nil {
+	if resp, err := c.GetKV("/test/t1"); err != nil {
 		panic(err)
 	} else {
-		log.Info(toolib.JsonString(resp.Kvs))
-		for _, v := range resp.Kvs {
-			log.Info(string(v.Key), string(v.Value))
-		}
+		StringGetResponse(resp)
+	}
+
+	if resp, err := c.GetKV("/test/", clientv3.WithPrefix()); err != nil {
+		panic(err)
+	} else {
+		StringGetResponse(resp)
 	}
 }

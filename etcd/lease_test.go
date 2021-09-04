@@ -1,6 +1,7 @@
 package etcd
 
 import (
+	"context"
 	"github.com/coreos/etcd/clientv3"
 	"github.com/scorpiotzh/toolib"
 	"testing"
@@ -56,7 +57,7 @@ func TestKeepAlive(t *testing.T) {
 		log.Info("lg:", lg.ID)
 	}
 	// 续租
-	ka, err := c.KeepAlive(lg.ID)
+	ka, err := c.KeepAlive(context.Background(), lg.ID)
 	if err != nil {
 		t.Fatal(err)
 	}

@@ -1,6 +1,7 @@
 package etcd
 
 import (
+	"context"
 	"github.com/coreos/etcd/clientv3"
 )
 
@@ -11,9 +12,9 @@ func (c *Client) LeaseGrant(ttl int64) (*clientv3.LeaseGrantResponse, error) {
 }
 
 // KeepAlive 续租
-func (c *Client) KeepAlive(leaseId clientv3.LeaseID) (<-chan *clientv3.LeaseKeepAliveResponse, error) {
+func (c *Client) KeepAlive(ctx context.Context, leaseId clientv3.LeaseID) (<-chan *clientv3.LeaseKeepAliveResponse, error) {
 	lease := clientv3.NewLease(c.client)
-	return lease.KeepAlive(c.ctx, leaseId)
+	return lease.KeepAlive(ctx, leaseId)
 }
 
 func (c *Client) StringKeepAlive(ka <-chan *clientv3.LeaseKeepAliveResponse) {
